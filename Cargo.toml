@@ -1,0 +1,19 @@
+[package]
+name = "counter_host"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+slint = "1.7.2"
+
+[build-dependencies]
+slint-build = "1.7.2"
+
+# Set Windows subsystem to "windows" to avoid console window
+[[bin]]
+name = "counter_host"
+path = "src/main.rs"
+windows_subsystem = "windows"
+
