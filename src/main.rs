@@ -1,22 +1,25 @@
-// Prevent console window in addition to Slint window in Windows release builds when, e.g., starting the app via file manager. Ignored on other platforms.
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+use std::thread;
+use std::time::Duration;
 
-use std::error::Error;
+mod ui;
+mod app;
 
-slint::include_modules!();
-
-fn main() -> Result<(), Box<dyn Error>> {
-    let ui = AppWindow::new()?;
-
-    ui.on_request_increase_value({
-        let ui_handle = ui.as_weak();
-        move || {
-            let ui = ui_handle.unwrap();
-            ui.set_counter(ui.get_counter() + 1);
-        }
+fn main() {
+    // Spawn a thread to run the UI
+    let ui_thread = thread::spawn(|| {
+        println!("Starting UI...");
+        ui::start_ui();  // This function will run in its own thread
     });
 
-    ui.run()?;
+    // Spawn a separate thread to run the background processing
+    let bg_thread = thread::spawn(|| {
+        println!("Starting background processing...");
+        app::process();  // This function will run in its own thread
+    });
 
-    Ok(())
+    // Wait for both threads to finish
+    ui_thread.join().unwrap();
+    bg_thread.join().unwrap();
+
+    println!("Both UI and background processing finished.");
 }
