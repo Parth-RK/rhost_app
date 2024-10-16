@@ -30,5 +30,4 @@
     cargo run
     ```
 
-Don't forget to edit this readme to replace it by yours, and edit the `name =` field in `Cargo.toml` to match the name of your
-project.
+Don't forget to edit the `name =` field in `Cargo.toml` to match the name of your project.

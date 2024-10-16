@@ -13,7 +13,7 @@ fn main() {
 
     // Spawn a separate thread to run the background processing
     let bg_thread = thread::spawn(|| {
-        println!("Starting background processing...");
+        println!("Starting background process...");
         app::process();  // This function will run in its own thread
     });
 
