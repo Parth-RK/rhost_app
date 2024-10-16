@@ -30,5 +30,8 @@
     ```bash
     cargo run
     ```
+    ```bash
+    cargo run --release
+    ```
 
 Don't forget to edit the `name =` field in `Cargo.toml` to match the name of your project.
