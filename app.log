@@ -1,9 +1,0 @@
-2024-10-16 21:52:49,325 - INFO - Deleted folder 'sample_data' after zipping.
-2024-10-16 21:52:49,325 - INFO - Zipped folder 'sample_data' to 'zip_data.zip'
-2024-10-16 21:52:52,565 - INFO - Deleted 'zip_data.zip' after encryption.
-2024-10-16 21:52:52,565 - INFO - File encrypted and saved.
-2024-10-16 21:52:52,565 - INFO - Key: b'\xce\xb9wp\xdc\x1ek\xb2\x8f\x8e\x8aiBs\x9b\x89s\xa2a\x08\xb8g\xf8\r\xd1\x02\xb2f\x9e\xc1\xabP'
-IV: b'!\x90\xea\xfa\xbf-\x96\xe573\xb9\xcfp/:\xf8'
-2024-10-16 21:52:55,577 - INFO - Deleted 'encrypted_data.bin' after decryption.
-2024-10-16 21:52:55,577 - INFO - File decrypted and saved.
-2024-10-16 21:52:59,597 - INFO - Unzipped 'zip_data.zip' to 'sample_data'
