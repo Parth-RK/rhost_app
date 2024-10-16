@@ -30,6 +30,7 @@
     ```bash
     cargo run
     ```
+    or
     ```bash
     cargo run --release
     ```
