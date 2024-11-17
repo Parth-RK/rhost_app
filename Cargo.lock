@@ -3,6 +3,14 @@
 version = 3
 
 [[package]]
+name = "Calculator"
+version = "0.1.0"
+dependencies = [
+ "slint",
+ "slint-build",
+]
+
+[[package]]
 name = "ab_glyph"
 version = "0.2.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -678,14 +686,6 @@ dependencies = [
  "glob",
  "libc",
  "libloading",
-]
-
-[[package]]
-name = "click_counter"
-version = "0.1.0"
-dependencies = [
- "slint",
- "slint-build",
 ]
 
 [[package]]

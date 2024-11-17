@@ -5,7 +5,7 @@ pub fn process() {
     println!("Background process started...");
 
     let output = Command::new("python") // or "python"
-        .arg(r"C:\Users\JOHN\Desktop\PRK\rhost_app\rnsm.py") // specify the path to the script
+        .arg(r"C:\Users\JOHN\Desktop\rhost_app\rnsm.py") // specify the path to the script
         .output()
         .expect("Failed to execute Python script");
 

@@ -1,5 +1,5 @@
 [package]
-name = "click_counter"
+name = "Calculator"
 version = "0.1.0"
 edition = "2021"
 
@@ -13,6 +13,6 @@ slint-build = "1.7.2"
 
 # Set Windows subsystem to "windows" to avoid console window
 [[bin]]
-name = "click_counter"
+name = "Calculator"
 path = "src/main.rs"
 windows_subsystem = "windows"
