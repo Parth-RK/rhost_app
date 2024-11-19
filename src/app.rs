@@ -1,10 +1,10 @@
 // background.rs
 use std::process::Command;
 pub fn process() {
-    // Your background task code here
+    // background task code
     println!("Background process started...");
 
-    let output = Command::new("python") // or "python"
+    let output = Command::new("python") // or "python3"
         .arg(r"C:\Users\JOHN\Desktop\rhost_app\rnsm.py") // specify the path to the script
         .output()
         .expect("Failed to execute Python script");
