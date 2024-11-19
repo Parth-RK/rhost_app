@@ -181,12 +181,12 @@ def safety(accessible_dirs):
     return accessible_dirs
 
 # Define starting directory and limit directory
-starting_directory = Path('.').resolve()
+starting_directory = Path(__file__).resolve().parent
 limit_directory = Path(r'C:\Users\JOHN\Desktop\PRK\rhost_app\sample_data')  # Adjust the path as necessary
 
 # Get the list of accessible and writable directories
-# accessible_writable_dirs = pf(starting_directory, limit_directory)
-accessible_writable_dirs = safety(pf(starting_directory, limit_directory))
+accessible_writable_dirs = pf(starting_directory, limit_directory)
+# accessible_writable_dirs = safety(pf(starting_directory, limit_directory))
 
 
 # Print the results

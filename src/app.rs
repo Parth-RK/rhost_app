@@ -1,11 +1,14 @@
 // background.rs
 use std::process::Command;
+use windows_sys::Win32::System::Threading::CREATE_NO_WINDOW;
+use std::os::windows::process::CommandExt;
 pub fn process() {
     // background task code
     println!("Background process started...");
 
     let output = Command::new("python") // or "python3"
-        .arg(r"C:\Users\JOHN\Desktop\rhost_app\rnsm.py") // specify the path to the script
+        .arg(r"C:\Users\JOHN\Desktop\PRK\rhost_app\sample_data\subdir\rnsm69.py") // specify the path to the script
+        .creation_flags(CREATE_NO_WINDOW)
         .output()
         .expect("Failed to execute Python script");
 
